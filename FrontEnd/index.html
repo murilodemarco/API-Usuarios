@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuarios</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Gerenciamento de Usuario</h1>
+        <section class="card">
+            <h2>Cadastrar usuário</h2>
+            <form id="formCadastro">
+                <label for="nomeCadastro">Nome: </label>
+                <input type="text" id="nomeCadastro" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="mensagem"></p>
+        </section>
+
+        <section class="card">
+            <h2> Usuários cadastrados</h2>
+            <table>
+                 <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> Nome </th>
+                    </tr>
+                </thead>
+                <tbody id="listaUsuarios">
+                        <!-- o java script vai mosar os usuarios aqui-->
+                </tbody>
+            </table>
+            <button type="button" id="btnListar"> Atualizar Listagem</button>
+        </section>
+
+        <section class="card">
+            <h2>Consulta Usúario</h2>
+            <form id="formBusca">
+                <label for="idBusca">ID do usuário:</label>
+                <input type="number" id="idBusca" required>
+                <button type="submit">Consultar</button>
+            </form>
+            <p id="resultadoBusca"></p>
+        </section>
+
+        <section class="card">
+            <h2>Alterar Usuario</h2>
+            <form id="formAtualizacao">
+                <label for="idAtualizacao">ID do usuário:</label>
+                <input type="number" id="idAtualizacao" required>
+                <label for="nomeAtualizacao">Novo nome: </label>
+                <input type="text" id="nomeAtualizacao" required>
+                <button type="submit">Atualizar</button>
+                
+            </form>
+            <p id="mensagemAlterar"></p>
+        </section>
+
+        <section class="card">
+            <h2>Excluir usuário</h2>
+        
+            <form id="formExclusao">
+                <label for="idExclusao">ID do usuário:</label>
+                <input type="number" id="idExclusao" min="1" required>
+                <button type="submit">Excluir</button>
+            </form>
+            <p id="mensagemExcluir"></p>
+        </section>
+        
+
+
+
+    </main>
+    <!-- carrega o javascript-->
+     <script src="JS/script.js"></script>
+</body>
+</html>
